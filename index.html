@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora de Bhaskara</title>
+</head>
+<script>
+    function click_calcular() {
+        let valorA = document.getElementById("valorA").value;
+        let valorB = document.getElementById("valorB").value;
+        let valorC = document.getElementById("valorC").value;
+
+        let delta = (Number(valorB ** 2)) - 4 * Number(valorA) * Number(valorC);
+
+        if(valorA === "" || valorB === "" || valorC === ""){
+            alert(`Informe os números!`)
+        }
+        else if (valorA === "0"){
+            alert(`Informe um valor para A diferente de 0`)
+        }
+        else if (delta < 0) {
+            alert(`O delta é >0, informe outros números`)
+        } 
+        else {
+            let bhakaraMais = (Number(-(valorB)) + Math.sqrt(delta)) / (2 * Number(valorA));
+            let bhakaraMenos = (Number(-(valorB)) - Math.sqrt(delta)) / (2 * Number(valorA));
+
+            document.getElementById("resultadoMais").innerHTML = `<h3> X' = ${bhakaraMais}</h3>`;
+            document.getElementById("resultadoMenos").innerHTML = `<h3> X'' = ${bhakaraMenos}</h3>`;
+        }
+    }
+    function click_limpar() {
+        document.getElementById("valorA").value = "";
+        document.getElementById("valorB").value = "";
+        document.getElementById("valorC").value = "";
+        document.getElementById("resultadoMais").innerHTML = "";
+        document.getElementById("resultadoMenos").innerHTML = "";
+    }
+</script>
+
+<body>
+    <h1>Calculadora de Bhaskara</h1>
+    <form>
+        <div>
+            <label for="">Informe o valor de A:</label>
+            <input type="number" name="" id="valorA">
+        </div>
+        <div>
+            <label for="">Informe o valor de B:</label>
+            <input type="number" name="" id="valorB">
+        </div>
+        <div>
+            <label for="">Informe o valor de C:</label>
+            <input type="number" name="" id="valorC">
+        </div>
+        <div id="resultadoMais"></div>
+        <div id="resultadoMenos"></div>
+        <div>
+            <input id="calcular" type="button" value="Calcular" onclick="click_calcular();">
+            <input id="limpar" type="button" value="Limpar" onclick="click_limpar()">
+        </div>
+    </form>
+</body>
+
+</html>

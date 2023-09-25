@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+    margin-top: 100px;
+    color: #225A76;
+}
+form{
+    text-align: center;
+    border: 1px solid #225A76;
+    margin-left: 600px;
+    margin-right: 600px;
+    background-color: #BDE3F2;
+    color: #225A76;
+}
+div{
+    margin: 10px;
+}
+#calcular{
+    background-color: #225A76;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+#limpar{
+    background-color: white;
+    color: #225A76;
+    border: 1px solid #225A76;
+    border-radius: 5px;
+}
