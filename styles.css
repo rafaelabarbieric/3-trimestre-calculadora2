@@ -1,11 +1,13 @@
-
+body{
+    background-color: #BDE3F2;
+}
 form{
     margin-top: 100px;
     text-align: center;
     border: 1px solid #225A76;
     margin-left: 600px;
     margin-right: 600px;
-    background-color: #BDE3F2;
+    background-color: white;
     color: #225A76;
 }
 div{
