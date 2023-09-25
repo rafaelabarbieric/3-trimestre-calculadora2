@@ -28,7 +28,7 @@
             let bhakaraMais = (Number(-(valorB)) + Math.sqrt(delta)) / (2 * Number(valorA));
             let bhakaraMenos = (Number(-(valorB)) - Math.sqrt(delta)) / (2 * Number(valorA));
 
-            document.getElementById("resultadoMais").innerHTML = `<h3> X' = ${bhakaraMais}</h3>`;
+            document.getElementById("resultadoMais").innerHTML = `<h2>RESULTADO:</h2> <h3> X' = ${bhakaraMais}</h3>`;
             document.getElementById("resultadoMenos").innerHTML = `<h3> X'' = ${bhakaraMenos}</h3>`;
         }
     }
@@ -42,8 +42,8 @@
 </script>
 
 <body>
-    <h1>Calculadora de Bhaskara</h1>
     <form>
+        <h1>Calculadora de Bhaskara</h1>
         <div>
             <label for="">Informe o valor de A:</label>
             <input type="number" name="" id="valorA">
